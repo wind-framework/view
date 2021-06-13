@@ -15,11 +15,18 @@ class Twig implements ViewInterface
 	    $viewDir = BASE_DIR.'/view';
 	    $cacheDir = RUNTIME_DIR.'/view';
 
+		$debug = config('debug', false);
+
 	    $loader = new FilesystemLoader($viewDir);
 	    $this->twig = new Environment($loader, [
 		    'cache' => $cacheDir,
-		    'auto_reload' => true
+		    'auto_reload' => true,
+			'debug' => $debug
 	    ]);
+
+		if ($debug) {
+			$this->twig->addExtension(new \Twig\Extension\DebugExtension());
+		}
     }
 
 	/**
@@ -34,7 +41,7 @@ class Twig implements ViewInterface
 
 	/**
 	 * Render view by TaskWorker
-	 * 
+	 *
 	 * @param string $name
 	 * @param array $context
 	 * @return \Amp\Promise<string>

@@ -2,7 +2,7 @@
     "name": "wind-framework/view",
     "description": "Wind framework view component.",
     "type": "library",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "require": {
         "wind-framework/wind-framework": "~0.1"
     },
