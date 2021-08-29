@@ -44,7 +44,7 @@ class Twig implements ViewInterface
 	 *
 	 * @param string $name
 	 * @param array $context
-	 * @return \Amp\Promise<string>
+	 * @return string
 	 */
 	public static function renderByTask($name, array $context=[])
 	{
