@@ -2,9 +2,8 @@
     "name": "wind-framework/view",
     "description": "Wind framework view component.",
     "type": "library",
-    "version": "1.0.0-dev",
     "require": {
-        "wind-framework/wind-framework": "1.0.0-dev"
+        "wind-framework/wind-framework": "1.0.x-dev"
     },
     "license": "Apache-2.0",
     "authors": [
