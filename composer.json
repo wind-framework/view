@@ -2,9 +2,8 @@
     "name": "wind-framework/view",
     "description": "Wind framework view component.",
     "type": "library",
-    "version": "0.1.2",
     "require": {
-        "wind-framework/wind-framework": "^0.2"
+        "wind-framework/wind-framework": "~0.2"
     },
     "license": "Apache-2.0",
     "authors": [
@@ -16,6 +15,11 @@
     "autoload": {
         "psr-4": {
             "Wind\\View\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
         }
     }
 }
