@@ -48,7 +48,7 @@ class Twig implements ViewInterface
 	 */
 	public static function renderByTask($name, array $context=[])
 	{
-		return Task::execute([ViewInterface::class, 'render'], $name, $context);
+		return Task::await([ViewInterface::class, 'render'], $name, $context);
 	}
 
 }
